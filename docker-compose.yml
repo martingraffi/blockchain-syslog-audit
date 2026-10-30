@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  node1:
+    image: ethereum/client-go:v1.10.26
+    container_name: poa-node1
+    command: --datadir /geth --syncmode full --port 30303 --http --http.addr 0.0.0.0 --http.api eth,net,web3,personal,miner --allow-insecure-unlock --unlock 0x1234567890abcdef1234567890abcdef12345678 --password /geth/password.txt --mine
+    volumes:
+      - ./poa-data/node1:/geth
+    ports:
+      - "8545:8545"
+  syslog-server:
+    image: rsyslog/rsyslog:v8.2110.0
+    container_name: syslog-tradicional
+    ports:
+      - "514:514/udp"
+# Fragmento ilustrativo (nodo 1 de 4). Configuración válida solo para el testbed aislado; no usar en producción
