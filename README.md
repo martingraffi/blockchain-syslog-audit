@@ -8,6 +8,10 @@ Material complementario del Trabajo Práctico Final de *Metodología de la Inves
 
 > ⚠️ **Aviso sobre los datos:** los resultados cuantitativos del informe (tasas de alteración, latencia, throughput, consumo de recursos y pruebas estadísticas) son **sintéticos**, generados con fines académicos conforme a lo acordado con la cátedra. Este repositorio contiene el diseño de referencia y fragmentos de código ilustrativos; no incluye mediciones de una corrida real. El dashboard de `docs/` es un mockup.
 
+## Dashboard simulado (mockup)
+
+![Dashboard simulado de Grafana](docs/dashboard_simulado_grafana.png)
+
 ## Problema
 
 Un servidor Syslog centralizado es un punto único de falla: con credenciales `root`/`SYSTEM`, un atacante puede alterar o borrar los registros locales y remotos para ocultar su intrusión.
